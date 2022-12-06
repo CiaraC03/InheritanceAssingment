@@ -28,4 +28,12 @@ public class Customer extends Person{
     public void setMailingList(boolean mailingList) {
         this.mailingList = mailingList;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerNumber='" + customerNumber + '\'' +
+                ", mailingList=" + mailingList +
+                '}';
+    }
 }
