@@ -2,9 +2,9 @@ package ie.atu;
 import java.util.Scanner;
 
 public class Person {
-    public String name;
-    public String address;
-    public String number;
+    private String name;
+    private String address;
+    private String number;
 
     public Person(){
 
