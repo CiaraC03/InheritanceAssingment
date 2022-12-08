@@ -32,15 +32,15 @@ public class preferredCustomer extends Customer{
     }
 
     public void checkCustomerStatus(float customerPurchase, float customerDiscount){
-        if(customerPurchase<=500 && customerPurchase>=999){
+        if(customerPurchase>=500 && customerPurchase<=999){
             System.out.println("5% discount on future purchases ");
             customerDiscount = 5;
         }
-        else if(customerPurchase<=1000 && customerPurchase>=1499){
+        else if(customerPurchase>=1000 && customerPurchase<=1499){
             System.out.println("6% discount on future purchases ");
             customerDiscount = 6;
         }
-        else if(customerPurchase<=1500 && customerPurchase>=1999){
+        else if(customerPurchase>=1500 && customerPurchase<=1999){
             System.out.println("7% discount om future purchases ");
             customerDiscount = 7;
         }
