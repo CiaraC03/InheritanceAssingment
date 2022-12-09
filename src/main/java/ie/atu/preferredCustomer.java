@@ -9,7 +9,7 @@ public class preferredCustomer extends Customer{
 
     }
 
-    public preferredCustomer(String name, String address, String number, String customerNumber, boolean mailingList, float customerPurchase, float customerDiscount){
+    public preferredCustomer(String name, String address, String number, String customerNumber, boolean mailingList, float customerPurchase, float customerDiscount) {
         super(name, address, number, customerNumber, mailingList);
         this.customerPurchase = customerPurchase;
         this.customerDiscount = customerDiscount;
@@ -31,7 +31,7 @@ public class preferredCustomer extends Customer{
         this.customerDiscount = customerDiscount;
     }
 
-    public void checkCustomerStatus(float customerPurchase, float customerDiscount){
+    public float checkCustomerStatus(float customerPurchase){
         if(customerPurchase>=500 && customerPurchase<=999){
             System.out.println("5% discount on future purchases ");
             customerDiscount = 5;
@@ -44,9 +44,21 @@ public class preferredCustomer extends Customer{
             System.out.println("7% discount om future purchases ");
             customerDiscount = 7;
         }
-        else if(customerPurchase<=2000){
+        else if(customerPurchase>=2000){
             System.out.println("10% discount on future purchases ");
             customerDiscount = 10;
         }
+        else{
+            customerDiscount = 0;
+        }
+        return customerDiscount;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+
+                "customerPurchase=" + customerPurchase +
+                ", customerDiscount=" + customerDiscount +
+                '}';
     }
 }
