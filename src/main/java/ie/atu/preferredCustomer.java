@@ -8,14 +8,14 @@ public class preferredCustomer extends Customer{
     public preferredCustomer(){
 
     }
-
+     //creating a constructor
     public preferredCustomer(String name, String address, String number, String customerNumber, boolean mailingList, float customerPurchase, float customerDiscount) {
         super(name, address, number, customerNumber, mailingList);
         this.customerPurchase = customerPurchase;
         this.customerDiscount = customerDiscount;
     }
 
-    public float getCustomerPurchase() {
+    public float getCustomerPurchase() { //using getters and setters
         return customerPurchase;
     }
 
@@ -31,7 +31,7 @@ public class preferredCustomer extends Customer{
         this.customerDiscount = customerDiscount;
     }
 
-    public float checkCustomerStatus(float customerPurchase){
+    public float checkCustomerStatus(float customerPurchase){ //creating a function and passing in the customerPurchase float to be used
         if(customerPurchase>=500 && customerPurchase<=999){
             System.out.println("5% discount on future purchases ");
             customerDiscount = 5;
@@ -51,12 +51,12 @@ public class preferredCustomer extends Customer{
         else{
             customerDiscount = 0;
         }
-        return customerDiscount;
+        return customerDiscount; //returning the customerDiscount value
     }
 
     @Override
     public String toString() {
-        return super.toString()+
+        return super.toString()+  //super values of preferredCustomer from customer print out
                 "customerPurchase=" + customerPurchase +
                 ", customerDiscount=" + customerDiscount +
                 '}';
